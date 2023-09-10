@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'SignupPage.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
@@ -10,7 +9,7 @@ import '../../recycle.dart';
 import 'welcome.dart';
 import 'welcome.dart';
 import 'LoginPage.dart';
-import 'SignupPage.dart';
+import 'signup_screen.dart';
 import '../../forget_password_mail.dart';
 import 'forget_password_model_bottom_sheet.dart';
 
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/welcome': (context) => WelcomeScreen(), // Welcome screen as the initial route
         '/login': (context) => LoginPage(),// Define your login page
-        '/signup': (context) => SignupPage(), // Define your signup page
+        '/signup': (context) => SignupScreen(), // Define your signup page
       },
     );
   }
