@@ -220,7 +220,7 @@ class RecyclePage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: screenWidth*1.00,//390,
+                top: screenWidth*1.04,//390,
                 left: screenWidth*0.02,
                 child: GestureDetector(
                   onTap: () {
@@ -306,7 +306,7 @@ class RecyclePage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top:screenWidth*1.55,// 600,
+                top:screenWidth*1.61,// 600,
                 left: screenWidth*0.02,
                 child: GestureDetector(
                   onTap: () {

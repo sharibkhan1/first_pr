@@ -22,12 +22,12 @@ class MobilePage extends StatelessWidget {
             ),
           ),
           Positioned(
-              top:40,
-              left: 90,
+              top:screenWidth*0.20,//40,
+              left: screenWidth*0.21,//90,
               child: Text(
                 "Recycle Phone",
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: screenWidth*0.11,//40,
                  fontWeight: FontWeight.bold,
                   color: Colors.orangeAccent,
                   shadows: [
@@ -42,8 +42,8 @@ class MobilePage extends StatelessWidget {
               ),
           ),
           Positioned(
-            top: 40,
-            left: 15,
+            top: screenWidth*0.20,//40,
+            left: screenWidth*0.05,//15,
             child: GestureDetector(
               onTap: () {
                 // Navigate back to the main page
@@ -51,21 +51,21 @@ class MobilePage extends StatelessWidget {
               },
               child: Image.asset(
                 'assets/images/Screenshot 2023-08-20 181147.png',
-                width: 60,
-                height: 60,
+                width: screenWidth*0.13,//60,
+                height: screenWidth*0.14,
               ),
             ),
           ),
           Positioned(
-            top: 100,
-            left: 40,
+            top: screenWidth*0.45,//100,
+            left: screenWidth*0.08,//40,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(40),
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
                 child: Container(
-                  width: 330,
-                  height: 580,
+                  width: screenWidth*0.85,//330,
+                  height: screenWidth*1.50,//580,
                   color: Colors.black.withOpacity(0.3),
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
@@ -73,11 +73,10 @@ class MobilePage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Positioned(
-
                           child: Text(
                             "Recycle Phone",
                             style: TextStyle(
-                              fontSize: 30,
+                              fontSize: screenWidth*0.09,//30,
                               fontWeight: FontWeight.bold,
                               color: Colors.orangeAccent,
                               shadows: [
@@ -91,7 +90,7 @@ class MobilePage extends StatelessWidget {
 
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: screenWidth*0.13),
                         TextFormField(
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
@@ -100,7 +99,7 @@ class MobilePage extends StatelessWidget {
                             border: OutlineInputBorder(),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: screenWidth*0.05),
                         TextFormField(
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
@@ -109,7 +108,7 @@ class MobilePage extends StatelessWidget {
                             border: OutlineInputBorder(),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: screenWidth*0.05),
                         TextFormField(
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
@@ -118,7 +117,7 @@ class MobilePage extends StatelessWidget {
                             border: OutlineInputBorder(),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: screenWidth*0.30),
                         ElevatedButton(
                           onPressed: () {
                             Navigator.pop(context);
