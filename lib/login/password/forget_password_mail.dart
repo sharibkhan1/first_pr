@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'login_footer.dart';
 import 'form_header_widget.dart';
 import 'OTPScreen.dart';
-import 'package:get/get.dart';
 import 'forget_password_model_bottom_sheet.dart';
 const double tDefaultSize = 20.0;
 class ForgetPasswordMail extends StatelessWidget {

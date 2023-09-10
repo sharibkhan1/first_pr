@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'login_footer.dart';
 import 'login_form.dart';
 import 'login_header_widget.dart';
-import 'package:get/get.dart';
 import 'main.dart';
 import 'package:first_pr/recycle.dart';
 // Define your variables

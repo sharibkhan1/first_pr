@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'bottom_sheet_widget.dart';
 import 'forget_password_button_widget.dart';
 import 'forget_password_mail.dart';

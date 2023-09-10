@@ -8,12 +8,13 @@ import 'onhover.dart';
 class RecyclePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
 
       body: SingleChildScrollView(
         child: Container(
-          height: 800,
-          width: 420,
+          height: screenWidth*2.19,//800,
+          width: screenWidth*1,//420,
           decoration: BoxDecoration(
             image:DecorationImage(
             image: AssetImage('assets/images/1e7f54db2278633340f7ccbdf95ca9ed.jpg'),
@@ -24,19 +25,19 @@ class RecyclePage extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                top:80,
-                left: 85,
+                top:screenWidth*0.21,//80,
+                left: screenWidth*0.25,//85,
                 child: Text(
                 "ITEM TO RECYCLE",
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: screenWidth*0.08,//35,
                     fontWeight: FontWeight.bold,
                     color: Colors.black87,
                     shadows: [
                           Shadow(
-                            color: Colors.orange,      // Shadow color
+                            color: Colors.white,      // Shadow color
                             offset: Offset(5, 5),     // Shadow offset (X, Y)
-                            blurRadius: 10,
+                            blurRadius: 40,
                           ),
                     ],
                   ),
@@ -89,8 +90,8 @@ class RecyclePage extends StatelessWidget {
                 ),
               ),*/
               Positioned(
-                top: 70,
-                left: 15,
+                top: screenWidth*0.19,//70,
+                left: screenWidth*0.04,//15,
                 child: GestureDetector(
                   onTap: () {
                     // Navigate back to the main page
@@ -98,8 +99,8 @@ class RecyclePage extends StatelessWidget {
                   },
                   child: Image.asset(
                     'assets/images/Screenshot 2023-08-20 181147.png',
-                    width: 60,
-                    height: 60,
+                    width: screenWidth*0.13,//60,
+                    height: screenWidth*0.14,//60,
                   ),
                 ),
               ),
@@ -131,8 +132,8 @@ class RecyclePage extends StatelessWidget {
               ),
 
               Positioned(
-                top: 180,
-                left: 10,
+                top: screenWidth*0.47,//180,
+                left: screenWidth*0.02,//10,
                 child: GestureDetector(
                   onTap: () {
                     // Navigate to the new page
@@ -143,8 +144,8 @@ class RecyclePage extends StatelessWidget {
                   },
                   child: OnHoverButton(
                     child: Container(
-                      width: 390,
-                      height: 170,
+                      width: screenWidth*0.95,//390,
+                      height: screenWidth*0.45,//170,
                       decoration: BoxDecoration(
                       /*  gradient: LinearGradient(
                           colors: [
@@ -180,8 +181,8 @@ class RecyclePage extends StatelessWidget {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(20),
                             child: Container(
-                              width: 390,
-                              height: 170,
+                              width: screenWidth*0.95,//390,
+                              height: screenWidth*0.45,//170,
                               child: Padding(
                                 padding: const EdgeInsets.all(0),
                                 child: Image.asset(
@@ -192,14 +193,14 @@ class RecyclePage extends StatelessWidget {
                             ),
                           ),
                             Positioned(
-                              right: 20,
-                              bottom: 60,
+                              right: screenWidth*0.06,//20,
+                              bottom: screenWidth*0.15,//60,
                                 child: Text(
                                   'MOBILE',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 30,
+                                    fontSize: screenWidth*0.09,
                                     shadows: [
                                       Shadow(
                                         offset: Offset(7, 7), // Adjust the values for the shadow offset as needed
@@ -219,8 +220,8 @@ class RecyclePage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 390,
-                left: 10,
+                top: screenWidth*1.00,//390,
+                left: screenWidth*0.02,
                 child: GestureDetector(
                   onTap: () {
                     // Navigate to the new page
@@ -230,8 +231,8 @@ class RecyclePage extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    width: 390,
-                    height: 170,
+                    width: screenWidth*0.95,//390,
+                      height: screenWidth*0.45,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
@@ -266,8 +267,8 @@ class RecyclePage extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Container(
-                            width: 390,
-                            height: 170,
+                            width: screenWidth*0.95,//390,
+                              height: screenWidth*0.45,
                             child: Padding(
                               padding: const EdgeInsets.all(0),
                               child: Image.asset(
@@ -278,14 +279,14 @@ class RecyclePage extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          right: 20,
-                          bottom: 60,
+                          right: screenWidth*0.06,//20,
+                          bottom: screenWidth*0.15,
                           child: Text(
                             'LAPTOP',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 30,
+                              fontSize: screenWidth*0.09,
                               shadows: [
                                 Shadow(
                                   offset: Offset(7, 7), // Adjust the values for the shadow offset as needed
@@ -305,8 +306,8 @@ class RecyclePage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                top: 600,
-                left: 10,
+                top:screenWidth*1.55,// 600,
+                left: screenWidth*0.02,
                 child: GestureDetector(
                   onTap: () {
                     // Navigate to the new page
@@ -316,8 +317,8 @@ class RecyclePage extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    width: 390,
-                    height: 170,
+                    width: screenWidth*0.95,//390,
+                      height: screenWidth*0.45,
 
                     decoration: BoxDecoration(
 
@@ -355,8 +356,8 @@ class RecyclePage extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Container(
-                            width: 390,
-                            height: 170,
+                            width: screenWidth*0.95,//390,
+                              height: screenWidth*0.45,
                             child: Padding(
                               padding: const EdgeInsets.all(0),
                               child: Image.asset(
@@ -367,14 +368,14 @@ class RecyclePage extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          right: 20,
-                              bottom: 60,
+                          right: screenWidth*0.06,//20,
+                          bottom: screenWidth*0.15,
                               child: Text(
                                 'PC',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 30,
+                                  fontSize: screenWidth*0.09,//30,
                                   shadows: [
                                     Shadow(
                                       offset: Offset(7, 7), // Adjust the values for the shadow offset as needed

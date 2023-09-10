@@ -1,5 +1,5 @@
 
-import 'package:carousel_slider/carousel_slider.dart';
+/*import 'package:carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class SliderScreen extends StatefulWidget {
@@ -92,4 +92,4 @@ class _SliderScreenState extends State<SliderScreen> {
     ]),
     );
     }
-}
+}*/

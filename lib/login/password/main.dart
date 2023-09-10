@@ -2,10 +2,12 @@ import 'dart:async';
 import 'package:first_pr/login/password/SignupPage.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'dart:ui';
 import '../../account_detail.dart';
 import '../../report.dart';
 import '../../recycle.dart';
+import 'welcome.dart';
 import 'welcome.dart';
 import 'LoginPage.dart';
 import 'SignupPage.dart';
@@ -96,6 +98,7 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
   return Scaffold(
   body: Builder(
   builder: (BuildContext context) {
@@ -103,14 +106,15 @@ class _MyHomePageState extends State<MyHomePage>
   children: [
   Container(
     decoration: BoxDecoration(
-      gradient: LinearGradient(
+      color: Color(0xFF777E5C)
+      /*gradient: LinearGradient(
         begin: Alignment.bottomCenter,
         end: Alignment.topCenter,
         colors: [
           Color(0xFF042148).withOpacity(0.9), // Blue color at the bottom
           Color(0xFF8CD8BF).withOpacity(0.5), // Green color at the top
         ],
-      ),
+      ),*/
     ),
   /* decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -127,8 +131,8 @@ class _MyHomePageState extends State<MyHomePage>
   Stack(
   children: [
   Container(
-  width: 460,
-  height: 106,
+  width: screenWidth,
+  height: screenWidth*0.3,
   decoration: ShapeDecoration(
   //color: Color(0xFF09631D),
   shape: RoundedRectangleBorder(
@@ -141,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage>
   Positioned(
   left: 0,
   child: Container(
-  padding: EdgeInsets.only(left: 15, top: 35),
+  padding: EdgeInsets.only(left: screenWidth * 0.05,top: screenWidth*0.14/*15, top: 35*/),
   child: Align(
   alignment: Alignment.centerLeft,
   child: GestureDetector(
@@ -162,8 +166,7 @@ class _MyHomePageState extends State<MyHomePage>
   curve: Curves.easeOutExpo,
   duration: const Duration(seconds: 1),
   decoration: BoxDecoration(
-  borderRadius: BorderRadius.circular(
-  15),
+  borderRadius: BorderRadius.circular(15),
   color: customWhiteColor,
   boxShadow: [
   BoxShadow(
@@ -185,13 +188,13 @@ class _MyHomePageState extends State<MyHomePage>
   ],
   ),
   child: SizedBox(
-  height: 50,
-  width: 50,
+  height: screenWidth*0.13,//50,
+  width: screenWidth*0.13,//50,
   child: Center(
   child: AnimatedIcon(
   icon: AnimatedIcons.menu_close,
   progress: _controller,
-  size: 35,
+  size: screenWidth*0.10,//35,
   color: Colors.redAccent,
   ),
   ),
@@ -202,14 +205,16 @@ class _MyHomePageState extends State<MyHomePage>
   ),
   ),
   ),
-  Positioned.fill(
+  Positioned(
+    top: screenWidth*0.09,
+  left: screenWidth*0.35,
   child: Align(
-  alignment: Alignment.center,
+  //alignment: Alignment.center,
   child: Text(
   'vsss',
   style: TextStyle(
   color: Colors.white,
-  fontSize: 64,
+  fontSize:screenWidth * 0.15 ,// 64,
   fontFamily: 'Oleo Script',
   fontWeight: FontWeight.w700,
   ),
@@ -219,7 +224,7 @@ class _MyHomePageState extends State<MyHomePage>
   ],
   ),
   Container(
-  height: 20,
+  height: screenWidth*0.05,//20,
   ),
     Column(
       children: [
@@ -234,8 +239,8 @@ class _MyHomePageState extends State<MyHomePage>
                 child: CarouselSlider(
                   items: imageList.map(
                         (item) => Container(
-                      width: 380,
-                      height: 380,  // Make sure width and height are the same for a perfect circle
+                      width: screenWidth*0.90,//380,
+                      height: screenWidth*0.30,//380,  // Make sure width and height are the same for a perfect circle
                       decoration: BoxDecoration(
                         borderRadius:BorderRadius.circular(40),
                           image: DecorationImage(
@@ -254,7 +259,7 @@ class _MyHomePageState extends State<MyHomePage>
                     autoPlay: false,
                     aspectRatio: 2,
                     viewportFraction: 1,
-                    height: 300,
+                    height: screenWidth*0.80,//300,
                     onPageChanged: (index, reason) {
                       setState(() {
                         currentIndex = index;
@@ -265,7 +270,7 @@ class _MyHomePageState extends State<MyHomePage>
               ),
             ),
             Positioned(
-              bottom: 10,
+              bottom: screenWidth*0.02,//10,
               left: 0,
               right: 0,
               child: Row(
@@ -444,62 +449,63 @@ class _MyHomePageState extends State<MyHomePage>
   ),
   ),
   ),
-  if (_isSidebarOpen)
-  Positioned(
-  top: 0,
-  bottom: 0,
-  left: 60,
-  child: Container(
-  width: 450,
-  child: ClipRect(
-  child: BackdropFilter(
-  filter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
-  child: Container(
-  decoration: BoxDecoration(
-  gradient: LinearGradient(
-  colors: [
-  Colors.redAccent.withOpacity(0.5),
-  Colors.greenAccent.withOpacity(0.5),
-  ],
-  begin: Alignment.topCenter,
-  end: Alignment.center,
-  ),
-  ),
-  child: Column(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: [
-  Container(
-  margin: EdgeInsets.only(top: 30),
-  height: 100,
-  decoration: BoxDecoration(
-  shape: BoxShape.circle,
-  image: DecorationImage(
-  image: AssetImage(
-  'assets/images/174692c6cbe2c30720a1b139cb61fd9f.jpg'),
-  ),
-  ),
-  padding: EdgeInsets.symmetric(
-  vertical: 30, horizontal: 20),
-  child: Row(
-  mainAxisAlignment: MainAxisAlignment.start,
-  children: [
-  Text(
-  'Sidebar Menu',
-  style: TextStyle(
-  fontSize: 30,
-  fontWeight: FontWeight.bold,
-  ),
-  ),
-  ],
-  ),
-  ),
-  const Divider(
-  color: Colors.black,
-  height: 50,
-  thickness: 3,
-  indent: 0,
-  endIndent: 0,
-  ),
+    if (_isSidebarOpen)
+      Positioned(
+        top: 0,
+        bottom: 0,
+        left: 60,
+        child: Container(
+          width: 450,
+          child: ClipRect(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 15.0, sigmaY: 15.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Colors.redAccent.withOpacity(0.5),
+                      Colors.greenAccent.withOpacity(0.5),
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.center,
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 30),
+                      height: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/images/174692c6cbe2c30720a1b139cb61fd9f.jpg',
+                          ),
+                        ),
+                      ),
+                      padding: EdgeInsets.symmetric(
+                          vertical: 30, horizontal: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Sidebar Menu',
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Divider(
+                      color: Colors.black,
+                      height: 50,
+                      thickness: 3,
+                      indent: 0,
+                      endIndent: 0,
+                    ),
   ListTile(
   title: GestureDetector(
   onTap: () {

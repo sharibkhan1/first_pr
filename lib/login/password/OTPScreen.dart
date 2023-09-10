@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart'; // Import Google Fonts package
+//import 'package:google_fonts/google_fonts.dart'; // Import Google Fonts package
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart'; // Import the OTP package
 import 'package:otp_text_field/otp_text_field.dart';
 class OTPScreen extends StatelessWidget {
